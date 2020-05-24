@@ -65,7 +65,7 @@ Este archivo permite configurar diversas opciones de la app, ver ejemplos en .en
 
 ## Docker
 
-Para crear el contenedor docker de este repositorio ejecutamos :
+Tambien podemos usar docker en este repositorio, ejecutamos :
 
 ```bash
 docker build -t ecommerce-cart-node .
