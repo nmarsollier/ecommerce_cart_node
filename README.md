@@ -68,17 +68,17 @@ Este archivo permite configurar diversas opciones de la app, ver ejemplos en .en
 Tambien podemos usar docker en este repositorio, ejecutamos :
 
 ```bash
-docker build -t ecommerce-cart-node .
-docker run -d --name ecommerce-cart-node --network host ecommerce-cart-node
+docker build -t dev-cart-node .
+docker run -d --name dev-cart-node --network host dev-cart-node
 ```
 
 El contenedor se puede parar usando :
 
 ```bash
-docker stop ecommerce-cart-node
+docker stop dev-cart-node
 ```
 Se vuelve a levantar usando 
 
 ```bash
-docker start ecommerce-cart-node 
+docker start dev-cart-node 
 ```
