@@ -68,7 +68,7 @@ Este archivo permite configurar diversas opciones de la app, ver ejemplos en .en
 Tambien podemos usar docker en este repositorio, ejecutamos :
 
 ```bash
-docker build -t dev-cart-node .
+docker build -t dev-cart-node -f Dockerfile.dev .
 docker run -d --name dev-cart-node --network host dev-cart-node
 ```
 

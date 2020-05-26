@@ -1,0 +1,11 @@
+# Docker para desarrollo
+FROM node:14.3.0
+
+COPY . /app
+WORKDIR /app
+RUN npm install
+
+# Puerto  Cart Service
+EXPOSE 3003
+
+CMD ["npm","start"]
