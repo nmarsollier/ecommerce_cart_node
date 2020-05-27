@@ -14,4 +14,4 @@ RUN npm run build
 # Puerto  Cart Service
 EXPOSE 3003
 
-CMD ["npm","run", "serve"]
+CMD cd dist; node server.js
