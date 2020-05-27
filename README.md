@@ -34,7 +34,6 @@ Seguir los pasos de instalación del sitio oficial
 
 Ver tutorial de instalación en [ecommerce](https://github.com/nmarsollier/ecommerce).
 
-
 ### RabbitMQ
 
 La comunicación con Catalog y Auth es a través de rabbit.
@@ -58,18 +57,24 @@ El microservicio muestra la documentación como archivos estáticos si se abre e
 
 Ademas se genera la documentación en formato markdown.
 
-## Archivo .env
+## Configuración del servidor
 
-Este archivo permite configurar diversas opciones de la app, ver ejemplos en .env.example
+Este servidor se configura con variables de entorno
 
+SERVER_PORT : Puerto (3003)
+LOG_LEVEL : Nivel de logs (debug)
+MONGO_URL : Url de mongo (mongodb://localhost/cart)
+AUTH_SERVICE_URL : Url auth service (http://localhost:3000)
+CATALOG_SERVICE_URL : Url de catalog service (http://localhost:3002)
+RABBIT_URL : Url rabbit (amqp://localhost)
 
 ## Docker
 
-Tambien podemos usar docker en este repositorio, ejecutamos :
+También podemos usar docker en este repositorio, ejecutamos :
 
 ```bash
 docker build -t dev-cart-node -f Dockerfile.dev .
-docker run -d --name dev-cart-node --network host dev-cart-node
+docker run -d --name dev-cart-node -p 3003:3003 dev-cart-node
 ```
 
 El contenedor se puede parar usando :
@@ -77,8 +82,9 @@ El contenedor se puede parar usando :
 ```bash
 docker stop dev-cart-node
 ```
-Se vuelve a levantar usando 
+
+Se vuelve a levantar usando
 
 ```bash
-docker start dev-cart-node 
+docker start dev-cart-node
 ```
