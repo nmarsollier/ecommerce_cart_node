@@ -6,9 +6,7 @@ ENV AUTH_SERVICE_URL http://host.docker.internal:3000
 ENV CATALOG_SERVICE_URL http://host.docker.internal:3002
 ENV RABBIT_URL amqp://host.docker.internal
 
-COPY . /app
 WORKDIR /app
-RUN npm install
 
 # Puerto  Cart Service
 EXPOSE 3003

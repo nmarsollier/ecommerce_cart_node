@@ -68,28 +68,18 @@ AUTH_SERVICE_URL : Url auth service (http://localhost:3000)
 CATALOG_SERVICE_URL : Url de catalog service (http://localhost:3002)
 RABBIT_URL : Url rabbit (amqp://localhost)
 
-## Docker
-
-También podemos usar docker en este repositorio, ejecutamos :
+### Build
 
 ```bash
-docker build -t dev-cart-node -f Dockerfile.dev .
-
-# Mac || Windows
-docker run -d --name dev-cart-node -p 3003:3003 dev-cart-node
-
-# Linux
-docker run --add-host host.docker.internal:172.17.0.1 -d --name dev-cart-node -p 3003:3003 dev-cart-node
- ```
-
-El contenedor se puede parar usando :
-
-```bash
-docker stop dev-cart-node
+docker build --no-cache -t dev-cart-node .
 ```
 
-Se vuelve a levantar usando
+### El contenedor
 
 ```bash
-docker start dev-cart-node
+# Mac | Windows
+docker run -it --name dev-cart-node -p 3003:3003 -v $PWD:/app dev-cart-node
+
+# Linux
+docker run -it --add-host host.docker.internal:172.17.0.1 --name dev-cart-node -p 3003:3003 -v $PWD:/app dev-cart-node
 ```
