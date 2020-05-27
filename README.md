@@ -14,7 +14,7 @@ Una vez hecha la compra el carrito se cierra y se genera una orden.
 La documentación de las api también se pueden consultar desde el home del microservicio
 que una vez levantado el servidor se puede navegar en [localhost:3003](http://localhost:3003/)
 
-## Dependencias
+## Dependencias
 
 ### Auth
 
@@ -74,8 +74,13 @@ También podemos usar docker en este repositorio, ejecutamos :
 
 ```bash
 docker build -t dev-cart-node -f Dockerfile.dev .
+
+# Mac || Windows
 docker run -d --name dev-cart-node -p 3003:3003 dev-cart-node
-```
+
+# Linux
+docker run --add-host host.docker.internal:172.17.0.1 -d --name dev-cart-node -p 3003:3003 dev-cart-node
+ ```
 
 El contenedor se puede parar usando :
 
