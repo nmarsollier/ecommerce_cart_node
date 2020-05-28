@@ -68,6 +68,8 @@ AUTH_SERVICE_URL : Url auth service (http://localhost:3000)
 CATALOG_SERVICE_URL : Url de catalog service (http://localhost:3002)
 RABBIT_URL : Url rabbit (amqp://localhost)
 
+## Docker
+
 ### Build
 
 ```bash
