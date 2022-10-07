@@ -33,16 +33,16 @@ const CartSchema = new Schema({
     type: String,
     trim: true,
     default: "",
-    required: "El userId asociado al cart"
+    required: [true, "El userId asociado al cart"]
   },
   orderId: {
     type: String,
-    trim: true
+    trim: true,
   },
   articles: [{
     articleId: {
       type: String,
-      required: "El articlelId agregado al cart",
+      required: [true, "El articlelId agregado al cart"],
       trim: true
     },
     quantity: {
