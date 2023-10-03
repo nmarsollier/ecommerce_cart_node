@@ -83,7 +83,7 @@ CartSchema.methods.addArticle = function (article: ICartArticle) {
   }
 
   this.articles.push(article);
-  sendArticleValidation(this._id, article.articleId).then();
+  sendArticleValidation(this.id, article.articleId).then();
   return;
 };
 

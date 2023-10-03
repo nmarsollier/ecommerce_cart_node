@@ -161,7 +161,7 @@ export function validateCheckout(userId: string, token: string): Promise<ICartVa
                                 }
                             ).catch(
                                 (exception) => {
-                                    callback(undefined, { "_id": undefined });
+                                    callback(undefined, { "id": undefined });
                                 }
                             );
                     },
@@ -175,6 +175,7 @@ export function validateCheckout(userId: string, token: string): Promise<ICartVa
                             warnings: []
                         };
 
+                        
                         cart.articles.map((article) => {
                             return {
                                 article: article,

@@ -56,7 +56,7 @@ Body
 {
   "userId": "{User Id}",
   "enabled": true|false,
-  "_id": "{Id de carrito}",
+  "id": "{Id de carrito}",
   "articles": [{Artículos}],
   "updated": "{Fecha ultima actualización}",
   "created": "{Fecha creado}"
