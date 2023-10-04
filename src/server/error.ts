@@ -120,10 +120,10 @@ function sendMongoose(res: express.Response, err: any): ValidationErrorMessage {
         };
       default:
         res.status(ERROR_BAD_REQUEST);
-        return { error: err };
+        return err ;
     }
   } catch (ex) {
     res.status(ERROR_INTERNAL_ERROR);
-    return { error: err };
+    return  err ;
   }
 }

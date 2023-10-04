@@ -31,7 +31,7 @@ export class RabbitDirectEmitter {
             const queue = await channel.assertQueue(this.queue, { durable: false });
 
             if (channel.publish(exchange.exchange, queue.queue, new Buffer(JSON.stringify(message)))) {
-                console.log("RabbitMQ Publish ArticleValidation " + message);
+                console.log("RabbitMQ Publish " + exchange.exchange + " - " + queue.queue + " : " + JSON.stringify(message));
                 return Promise.resolve(message);
             } else {
                 return Promise.reject(new Error("No se pudo encolar el mensaje"));
