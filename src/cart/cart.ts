@@ -224,11 +224,11 @@ export function placeOrder(userId: string): Promise<void> {
     return new Promise((resolve, reject) => {
         currentCart(userId)
             .then(cart => {
-                if(cart.articles.length == 0) {
+                if (cart.articles.length == 0) {
                     reject(error.newError(
                         400,
                         "No posee items"
-                    ))
+                    ));
                 }
                 cart.enabled = false;
                 // Save the Cart
