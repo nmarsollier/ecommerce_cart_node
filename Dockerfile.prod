@@ -9,10 +9,9 @@ ENV RABBIT_URL=amqp://host.docker.internal
 WORKDIR /app
 RUN curl -L https://github.com/nmarsollier/ecommerce_cart_node/tarball/master | tar xz --strip=1
 RUN npm install --silent
-RUN npm run build
 
 # Puerto  Cart Service
 EXPOSE 3003
 
-CMD cd dist; node server.js
+CMD npm start
 
