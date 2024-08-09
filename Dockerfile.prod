@@ -15,3 +15,4 @@ RUN npm run build
 EXPOSE 3003
 
 CMD cd dist; node server.js
+
