@@ -24,7 +24,7 @@
         "compression": "1.7.4",
         "connect-mongo": "4.6.0",
         "dotenv": "16.0.3",
-        "express": "4.18.1",
+        "express": "4.19.2",
         "typed-rest-client": "1.8.9",
         "escape-html": "1.0.3",
         "mongoose": "6.6.5",
